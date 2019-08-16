@@ -94,20 +94,20 @@
   				<textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ..."></textarea>
 			</form> -->
 			<div class="darker">
-				<form onsubmit = "return calc()" action = "#">
+				<form onsubmit = "return calc()" action = "#" autocomplete="off">
 					<div class="col-md-6">
 						<div class="form-group row">
 							<h4>输入</h4>
 							<input class="form-control form-control-alternative" id="expr" placeholder="输入表达式" />
 
-							<input type="submit" value="计算"></input>
+							<!--<input type="submit" value="计算"></input>-->
 						</div>
 					</div>
 				</form>
 				<form>
 					<div class="col-md-6">
 	    				<div class="form-group row">
-	    					<h4>答案</h4>
+	    					<h4 onclick="calc()">答案</h4>
 	     					<input id="calc-ans" type="text" placeholder="答案" class="form-control form-control-alternative" disabled />
 	    				</div>
 	    			</div>
