@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- title -->
+	<link rel="icon" href="assets" type="image/x-icon"/>
 	<title>OI工具</title>
+
+	<!-- CSS -->
 	<style type="text/css">
 		.page-header
 		{
-			margin-top: -8px;
-			margin-left: -8px;
-			margin-right: -8px;
-			margin-bottom: -8px;
 			padding: 5rem 6rem;
 			color: #fff;
 			text-align: center;
@@ -16,23 +16,62 @@
 			/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
 			background-image: linear-gradient(120deg, #155799, #159957);
 		}
-		.header-left-bar
+		.page-main
 		{
-			max-width: 1px;
-			background-color: #222d32;
-			margin-left: -8px;
-			padding: 20rem 2rem;
+			margin: 0 auto;
+			padding: 2rem 30rem;
+			padding-top: 6rem;
+			box-sizing: border-box;
+		}
+		#calc
+		{
+			height: 10rem !important;
+			width: 10rem !important;
+		}
+		.large-font
+		{
+			font-size: 20px;
 		}
 	</style>
+	<!-- argon css -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon -->
+	<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- Icons -->
+	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Argon CSS -->
+	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
 </head>
 <body>
+	<!-- JS -->
+	<!-- argon JS -->
+	<!-- Core -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/popper/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Optional plugins -->
+	<script src="assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js"></script>
+	<!-- Theme JS -->
+	<script src="assets/js/argon.js"></script>
+
 	<!-- hearder -->
-	<section class="page-header">
+	<header class="page-header">
 		<div style="font-size: 60px;font-weight: 600;">OI工具</div>
 		<h2>实用的刷OI题工具</h2>
-	</section>
-	<section class="page-main">
-		<h1 style="text-align: center;"><a href="calc.html">计算器</a></h1>
-	</section>
+	</header>
+	<main class="page-main">
+		<center>
+			<button class="btn btn-primary btn-lg" type="button" id="calc">
+				<span class="btn-inner--icon large-font">
+					<i class="ni ni-bag-17"></i>
+				</span>
+	    		<span class="btn-inner--text large-font">计算器</span>
+			</button>
+		</center>
+	</main>
 </body>
 </html>
