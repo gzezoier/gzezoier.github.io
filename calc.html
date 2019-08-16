@@ -58,7 +58,6 @@
 			var allowed = "0123456789+-*/.%()^ ";
 			//alert("a");
 			//alert(document.getElementById("expr").value);
-			document.getElementById("calc-ans").value = "";
 			var flag = 0, sflag;
 			var e = document.getElementById("expr").value;
 			if (e == "") return 0;
@@ -75,10 +74,15 @@
 				if (!sflag) {
 					flag = 1;
 					alert("表达式有违规字符于" + String(i+1) + "(" + e[i] + ")");
+					document.getElementById("calc-ans").value = "";
 					return 0;
 				}
 			}
-			var ans = eval(e);
+			try {
+				var ans = eval(e);
+			} catch(errormsg) {
+				alert(errormsg);
+			}
 			document.getElementById("calc-ans").value = ans;
 			return 0;
 		}
