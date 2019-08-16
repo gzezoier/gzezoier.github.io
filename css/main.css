@@ -3,9 +3,26 @@
     height: 5vh; /*设定footer高度*/
     position: absolute; /*设定footer绝对位置在底部*/
     bottom: 0;
+    padding: 0.5vh 15vw;
+    font-size: 2vh !important;
     background-color: #11cdef;
+    z-index: 100 !important;
     text-align: center;
     color: #ffffff;
-    padding: 0.5vh 15vw;
     /*line-height: 40px;*/
+}
+
+.full-screen
+{
+	height: 75vh !important;
+}
+
+.page-main
+{
+	height: 75vh;
+	width: 100vw;
+	margin: 0 auto;
+	padding: 10vh 30vw;
+	padding-top: 6rem;
+	/*box-sizing: border-box;*/
 }
