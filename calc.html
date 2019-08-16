@@ -4,8 +4,10 @@
 	<style type="text/css">
 		.page-header
 		{
-			padding: 4rem 5rem;
-			color: #fff;
+			height: 20vh;
+			width: 100vw;
+			padding: 5vh 15vw;
+			color: #ffffff;
 			background-color: #5e72e4;
 			/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
 			background-image: linear-gradient(120deg, #155799, #159957);
@@ -13,8 +15,12 @@
 		.page-main
 		{
 			margin: 0 auto;
-			padding: 2rem 30rem;
-			padding-top: 6rem;
+			/*padding: 40em 60em;
+			padding-top: 30em;
+			*/
+			height: auto !important;
+			width: auto !important;
+			padding: 2vh 3vw;
 			box-sizing: border-box;
 		}
 		#calc-ans
@@ -89,32 +95,31 @@
 
 	<!-- hearder -->
 	<header class="page-header">
-		<div style="font-size: 50px;font-weight: 550;">计算器</div>
+		<div style="font-size: 7vh;font-weight: 550;">计算器</div>
 	</header>
 	<main class="page-main">
-		<center>
-			<!-- <form>
-  				<textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ..."></textarea>
-			</form> -->
-			<div>
-				<form onsubmit = "return calc()" action = "#" autocomplete="off">
-					<div class="col-md-6">
-						<div class="form-group row">
-							<h4>输入</h4>
-							<input class="form-control form-control-alternative" id="expr" placeholder="输入表达式" />
+		<center class="card shadow">
 
-							<!--<input type="submit" value="计算"></input>-->
+			<div  class="card-body darker">
+				<div class="tab-content">
+					<form onsubmit = "return calc()" action = "#" autocomplete="off">
+						<div class="col-md-6">
+							<div class="form-group row">
+								<h4>输入</h4>
+								<input class="form-control form-control-alternative" id="expr" placeholder="输入表达式" />
+
+							</div>
 						</div>
-					</div>
-				</form>
-				<form>
-					<div class="col-md-6">
-	    				<div class="form-group row">
-	    					<h4 onclick="calc()">答案</h4>
-	     					<input id="calc-ans" type="text" placeholder="答案" class="form-control form-control-alternative" disabled />
-	    				</div>
-	    			</div>
-				</form>
+					</form>
+					<form>
+						<div class="col-md-6">
+		    				<div class="form-group row">
+		    					<h4 onclick="calc()">答案</h4>
+		     					<input id="calc-ans" type="text" placeholder="答案" class="form-control form-control-alternative" disabled />
+		    				</div>
+		    			</div>
+					</form>
+				</div>
 			</div>
 		</center>
 	</main>
