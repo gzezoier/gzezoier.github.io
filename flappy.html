@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#calc-ans
+		{
+			background-color: #fff;
+		}
+		.darker
+		{
+			background-color: #f7f8f9;
+		}
+	</style>
+	<!-- title -->
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="icon" href="assets" type="image/x-icon"/>
+	<title>OI工具</title>
+	<!-- argon css -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon -->
+	<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- Icons -->
+	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Argon CSS -->
+	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
+</head>
+<body class="darker">
+	<!-- JS -->
+	<!-- argon JS -->
+	<!-- Core -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/popper/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Theme JS -->
+	<script src="assets/js/argon.js"></script>
+
+	<script> 
+		function calc() {
+			var allowed = "0123456789+-*/.%()^e ";
+			//alert("a");
+			//alert(document.getElementById("expr").value);
+			var flag = 0, sflag;
+			var e = document.getElementById("expr").value;
+			if (e == "") return 0;
+			while (e.indexOf("^") != -1) {
+				e=e.replace("^", "**");
+			}
+			for (var i = 0; i < e.length; i++) {
+				sflag = 0;
+				for (var j = 0; j < allowed.length; j++) {
+					if (e[i] == allowed[j]) {
+						sflag = 1;
+					}
+				} 
+				if (!sflag) {
+					flag = 1;
+					alert("表达式有违规字符于" + String(i+1) + "(" + e[i] + ")");
+					document.getElementById("calc-ans").value = "";
+					return 0;
+				}
+			}
+			try {
+				var ans = eval(e);
+			} catch(errormsg) {
+				alert(errormsg);
+			}
+			document.getElementById("calc-ans").value = ans;
+			return 0;
+		}
+	</script>
+
+	<!-- hearder -->
+	<header class="page-header">
+		<div style="font-size: 7vh;font-weight: 550;">Flappy Bird</div>
+	</header>
+	<main class="page-main full-screen">
+		<center class="card shadow">
+			<iframe src="/static/game/flappybird/" width="388″ height=" 516"="" frameborder="no" border="0″ marginwidth=" 0″="" marginheight="0″ scrolling=" no"="" allowtransparency="yes" style="height: 530px; width: 400px;" onload="$(" #result-status").focus()"=""></iframe>
+		</center>
+	</main>
+	<div class="foot-sec">
+		<p>By zhangtianli, szTom and 666DHG</p>
+	</div>
+</body>
+</html>

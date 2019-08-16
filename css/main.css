@@ -26,3 +26,14 @@
 	padding-top: 6rem;
 	/*box-sizing: border-box;*/
 }
+
+.page-header
+{
+	height: 20vh;
+	width: 100vw;
+	padding: 5vh 15vw;
+	color: #fff;
+	background-color: #5e72e4;
+	/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
+	background-image: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
