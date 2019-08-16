@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.page-header
+		{
+			padding: 4rem 5rem;
+			color: #fff;
+			background-color: #5e72e4;
+			/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
+			background-image: linear-gradient(120deg, #155799, #159957);
+		}
+		.page-main
+		{
+			margin: 0 auto;
+			padding: 2rem 30rem;
+			padding-top: 6rem;
+			box-sizing: border-box;
+		}
+		#calc-ans
+		{
+			background-color: #fff;
+		}
+		.darker
+		{
+			padding: 1.25rem;
+			background-color: #f7f8f9;
+		}
+	</style>
+	<!-- title -->
+	<link rel="icon" href="assets" type="image/x-icon"/>
+	<title>OI工具</title>
+	<!-- argon css -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon -->
+	<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- Icons -->
+	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Argon CSS -->
+	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
+</head>
+<body>
+	<!-- JS -->
+	<!-- argon JS -->
+	<!-- Core -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/popper/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Optional plugins -->
+	<script src="assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js"></script>
+	<!-- Theme JS -->
+	<script src="assets/js/argon.js"></script>
+
+	<!-- hearder -->
+	<header class="page-header">
+		<div style="font-size: 50px;font-weight: 550;">计算器</div>
+	</header>
+	<main class="page-main">
+		<center>
+			<!-- <form>
+  				<textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ..."></textarea>
+			</form> -->
+			<div class="darker">
+				<form>
+					<div class="col-md-6">
+						<div class="form-group row">
+							<h4>输入</h4>
+							<input class="form-control form-control-alternative" id="exampleFormControlInput1" placeholder="输入表达式">
+						</div>
+					</div>
+				</form>
+				<form>
+					<div class="col-md-6">
+	    				<div class="form-group row">
+	    					<h4>答案</h4>
+	     					<input id="calc-ans" type="text" placeholder="答案" class="form-control form-control-alternative" disabled />
+	    				</div>
+	    			</div>
+				</form>
+			</div>
+		</center>
+	</main>
+</body>
+</html>
