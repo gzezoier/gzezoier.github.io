@@ -58,8 +58,10 @@
 			var allowed = "0123456789+-*/.%()^ ";
 			//alert("a");
 			//alert(document.getElementById("expr").value);
+			document.getElementById("calc-ans").value = "";
 			var flag = 0, sflag;
 			var e = document.getElementById("expr").value;
+			if (e == "") return 0;
 			while (e.indexOf("^") != -1) {
 				e=e.replace("^", "**");
 			}
