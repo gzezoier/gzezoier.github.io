@@ -1,0 +1,11 @@
+.foot-sec {
+	width: 100vw; /*展开footer宽度*/
+    height: 5vh; /*设定footer高度*/
+    position: absolute; /*设定footer绝对位置在底部*/
+    bottom: 0;
+    background-color: #11cdef;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.5vh 15vw;
+    /*line-height: 40px;*/
+}

@@ -20,10 +20,12 @@
 		}
 		.page-main
 		{
+			height: 75vh;
+			width: 100vw;
 			margin: 0 auto;
-			padding: 2rem 30rem;
+			padding: 10vh 30vw;
 			padding-top: 6rem;
-			box-sizing: border-box;
+			/*box-sizing: border-box;*/
 		}
 		#calc
 		{
@@ -39,12 +41,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon -->
-	<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+	<!--<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">-->
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<!-- Icons -->
 	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
 	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<!-- Argon CSS -->
 	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
 </head>
@@ -67,15 +70,15 @@
 	</header>
 	<main class="page-main">
 		<center>
-			<a href="calc.html">
+			<a href="calc.html?#">
 				<button class="btn btn-primary btn-lg" type="button" id="calc">
-					<span class="btn-inner--icon large-font">
-						<i class="ni ni-bag-17"></i>
-					</span>
 		    		<span class="btn-inner--text large-font">计算器</span>
 				</button>
 			</a>
 		</center>
 	</main>
+	<div class="foot-sec">
+		<p>By zhangtianli, szTom and 666DHG</p>
+	</div>
 </body>
 </html>
