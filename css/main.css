@@ -55,3 +55,12 @@
 {
 	content:"<";
 }
+
+.game-button {
+	width: 15vh;
+	height: 15vh;
+	position: absolute !important;
+    bottom: 15vmin;
+    right: 15vmin;
+    z-index: 200 !important;
+}

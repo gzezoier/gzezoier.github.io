@@ -23,7 +23,18 @@
 	</style>
 	<script type="text/javascript">
 		window.onload = function() {
-
+			if (document.body.clientHeight < 500 && document.body.clientWidth < 500) {
+				var btn = document.createElement("BUTTON");
+				var intext = document.createTextNode("Games Here");
+				btn.appendChild(intext);
+				var att=document.createAttribute("class");
+				att.value="btn btn-primary btn-lg game-button";
+				var att2=document.createAttribute("onclick");
+				att2.value=""
+				att.value="btn btn-primary btn-lg game-button";
+				btn.setAttributeNode(att);
+				document.body.appendChild(btn);
+			}
 		}
 
 	</script>
