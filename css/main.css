@@ -50,3 +50,8 @@
 	font-weight: 50 !important;
 	font-family: SimHei;
 }
+
+.left-arrow::before
+{
+	content:"<";
+}
