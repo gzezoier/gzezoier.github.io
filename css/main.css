@@ -37,3 +37,16 @@
 	/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
 	background-image: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
 }
+
+.back
+{
+	height: 10vmin !important;
+	width: 15vmin !important;
+}
+
+.left-arrow
+{
+	font-size: 18px;
+	font-weight: 50 !important;
+	font-family: SimHei;
+}

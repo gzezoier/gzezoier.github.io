@@ -20,6 +20,10 @@
 		{
 			background-color: #f7f8f9;
 		}
+		.bold-left::before
+		{
+			content: "\ea10";
+		}
 	</style>
 	<!-- title -->
 	<link href="css/main.css" rel="stylesheet">
@@ -82,22 +86,25 @@
 			return 0;
 		}
 	</script>
-
 	<!-- hearder -->
 	<header class="page-header">
 		<div style="font-size: 7vh;font-weight: 550;">计算器</div>
 	</header>
 	<main class="page-main full-screen">
 		<center class="card shadow">
-
-			<div  class="card-body darker">
+			<div class="card-body darker">
+				<a style="float:left;" href="home.html">
+					<button class="btn btn-primary btn-lg" type="button">
+						<span class="left-arrow"><</span>
+						<span class="btn-inner--text large-font">返回</span>
+					</button>
+				</a>
 				<div class="tab-content">
 					<form onsubmit = "return calc()" action = "#" autocomplete="off">
 						<div class="col-md-6">
 							<div class="form-group row">
 								<h4>输入</h4>
 								<input class="form-control form-control-alternative" id="expr" placeholder="输入表达式" />
-
 							</div>
 						</div>
 					</form>
