@@ -153,7 +153,10 @@ var kingEvalWhite = [
 var kingEvalBlack = reverseArray(kingEvalWhite);
 
 
-
+var restart = function() {
+    game = new Chess();
+    board = ChessBoard('board', cfg);
+}
 
 var getPieceValue = function (piece, x, y) {
     if (piece === null) {
