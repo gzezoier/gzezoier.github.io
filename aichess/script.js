@@ -153,6 +153,13 @@ var kingEvalWhite = [
 var kingEvalBlack = reverseArray(kingEvalWhite);
 
 
+var undo_once = function() {
+    game.undo();
+    game.undo();
+    board.position(game.fen());
+    renderMoveHistory(game.history());
+}
+
 var restart = function() {
     game = new Chess();
     board = ChessBoard('board', cfg);
@@ -212,7 +219,7 @@ var makeBestMove = function () {
     }
 };
 
-var makeRandomMove =function(game) {
+var makeRandomMove = function(game) {
     //generate all the moves for a given position
     var newGameMoves = game.ugly_moves();
     return newGameMoves[Math.floor(Math.random() * newGameMoves.length)];
