@@ -21,23 +21,6 @@
 			font-size: 20px;
 		}
 	</style>
-	<script type="text/javascript">
-		window.onload = function() {
-			if (document.body.clientHeight < 500 && document.body.clientWidth < 500) {
-				var btn = document.createElement("BUTTON");
-				var intext = document.createTextNode("Games Here");
-				btn.appendChild(intext);
-				var att=document.createAttribute("class");
-				att.value="btn btn-primary btn-lg game-button";
-				var att2=document.createAttribute("onclick");
-				att2.value=""
-				att.value="btn btn-primary btn-lg game-button";
-				btn.setAttributeNode(att);
-				document.body.appendChild(btn);
-			}
-		}
-
-	</script>
 	<!-- argon css -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -53,7 +36,7 @@
 	<!-- Argon CSS -->
 	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
 </head>
-<body>
+<body class="darker">
 	<!-- JS -->
 	<!-- argon JS -->
 	<!-- Core -->
@@ -71,12 +54,26 @@
 		<h2 style="font-size: 3vh;">实用的刷OI题工具</h2>
 	</header>
 	<main class="page-main full-screen">
-		<center>
-			<a href="calc.html?#">
-				<button class="btn btn-primary btn-lg" type="button" id="calc">
-		    		<span class="btn-inner--text large-font">计算器</span>
-				</button>
-			</a>
+		<center class="card shadow">
+			<div class="card-body darker">
+				<div style="padding: 3vmin 3vmin">
+					<a href="calc.html?#">
+						<button class="btn btn-primary btn-lg" type="button" id="calc">
+				    		<span class="btn-inner--text large-font">计算器</span>
+						</button>
+					</a>
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<a href="prime.html">
+						<button class="btn btn-primary btn-lg" type="button" id="calc">
+				    		<span class="btn-inner--text large-font">素数判断</span>
+						</button>
+					</a>
+				</div>
+			</div>
 		</center>
 	</main>
 	<div class="foot-sec">
