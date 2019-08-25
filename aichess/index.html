@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="board" class="board"></div>
 <script src="lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="lib/chessboardjs/js/chess.js"></script>
 <script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
 <script src="script.js"></script>
-<div id="board" class="board"></div>
 <div class="info">
     Search depth:
     <select id="search-depth">
+        <option value="-3">-3</option>
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2" selected>2</option>

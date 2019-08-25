@@ -231,8 +231,14 @@ var getBestMove = function (game) {
     positionCount = 0;
     var depth = parseInt($('#search-depth').find(':selected').text());
 
+    var who_do = true;
+    if (depth < 0) {
+        depth = -depth;
+        who_do = false;
+    }
+
     var d = new Date().getTime();
-    var bestMove = minimaxRoot(depth, game, true);
+    var bestMove = minimaxRoot(depth, game, who_do);
     var d2 = new Date().getTime();
     var moveTime = (d2 - d);
     var positionsPerS = ( positionCount * 1000 / moveTime);
