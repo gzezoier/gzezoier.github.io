@@ -60,7 +60,7 @@
 	<script type="text/javascript">
 		function prime()
 		{
-			var allowed = "0123456789";
+			var allowed = "-0123456789";
 			var e = document.getElementById("expr").value;
 			if (e == "") return 0;
 			for (var i = 0; i < e.length; i++) {
@@ -77,6 +77,11 @@
 				}
 			}
 			var n = Number(e);
+			if (n <= 1)
+			{
+				alert("No (<=1)");
+				return 0;
+			}
 			for (var i = 2; i <= Math.sqrt(n); i++)
 			{
 				if (n % i == 0)

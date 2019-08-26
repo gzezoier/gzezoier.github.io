@@ -296,7 +296,7 @@ var onDrop = function (source, target) {
     }
 
     renderMoveHistory(game.history());
-    window.setTimeout(makeBestMove, 250);
+    window.setTimeout(makeBestMove, 100);
 };
 
 var onSnapEnd = function () {
