@@ -43,6 +43,9 @@
 	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
 </head>
 <body class="darker">
+	<!-- layer js-->
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="layer/layer.js"></script>
 	<!-- JS -->
 	<!-- argon JS -->
 	<!-- Core -->
@@ -53,6 +56,12 @@
 	<script src="assets/js/argon.js"></script>
 
 	<script> 
+		var copy_act = function() {
+        var copyText = $("#calc-ans");//获取对象
+        copyText.select();//选择
+        document.execCommand("Copy");//执行复制
+ 　　　	alert("复制成功！");
+};
 		function calc() {
 			var allowed = "0123456789+-*/.%()^e ";
 			//alert("a");
@@ -103,7 +112,11 @@
 					<form onsubmit = "return calc()" action = "#" autocomplete="off">
 						<div class="col-md-6">
 							<div class="form-group row">
-								<h4>输入</h4>
+		    					<div style="width: 100%">
+			    					<h4 style="float: left;">输入</h4>
+									<button type="button" class="btn btn-outline-info" style="float: right;" onclick="calc()">计算</button>
+								</div>
+								<div style="height: 1vmin;width: 100%"></div>
 								<input class="form-control form-control-alternative" id="expr" placeholder="输入表达式" />
 							</div>
 						</div>
@@ -111,7 +124,11 @@
 					<form>
 						<div class="col-md-6">
 		    				<div class="form-group row">
-		    					<h4 onclick="calc()">答案</h4>
+		    					<div style="width: 100%">
+			    					<h4 style="float: left;">答案</h4>
+									<button type="button" class="btn btn-outline-info" style="float: right;" id="Copy" onclick="copy_act()">复制</button>
+								</div>
+								<div style="height: 1vmin;width: 100%"></div>
 		     					<input id="calc-ans" type="text" placeholder="答案" class="form-control form-control-alternative" disabled />
 		    				</div>
 		    			</div>
