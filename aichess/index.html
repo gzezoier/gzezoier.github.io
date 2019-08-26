@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Argon CSS -->
+    <link type="text/css" href="../assets/css/argon.css" rel="stylesheet">
 </head>
 <body>
-<div id="board" class="board"></div>
-<script src="lib/jquery/jquery-3.2.1.min.js"></script>
-<script src="lib/chessboardjs/js/chess.js"></script>
-<script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
-<script src="script.js"></script>
-<div class="info">
-    Search depth:
-    <select id="search-depth">
-        <option value="-3">-3</option>
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2" selected>2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-
-    <br>
-    <span>Positions evaluated: <span id="position-count"></span></span>
-    <br>
-    <span>Time: <span id="time"></span></span>
-    <br>
-    <span>Positions/s: <span id="positions-per-s"></span> </span>
-    <br>
-    <br>
-    <div id="move-history" class="move-history" style="height: 5em">
+    <div class="card-body shadow" style="overflow: hidden;width: 500px;margin: auto;">
+    <div id="board" class="board"></div>
     </div>
-</div>
+        <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+        <script src="lib/chessboardjs/js/chess.js"></script>
+        <script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+        <script src="script.js"></script>
+        <div style="height: 5vh !important"></div>
+        <div class="card-body shadow info" style="font-family: 'Open Sans',sans-serif;">
+        <strong>Search depth:</strong>
+        <select id="search-depth">
+            <option value="-3">-3</option>
+            <option value="-2">-2</option>
+            <option value="-1">-1</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
 
-
-<button onclick="restart()">Restart</button>
-<button onclick="undo_once()">Undo</button>
-<script>
-
-</script>
+        <br>
+        <span>Positions evaluated: <span id="position-count"></span></span>
+        <br>
+        <span>Time: <span id="time"></span></span>
+        <br>
+        <span>Positions/s: <span id="positions-per-s"></span> </span>
+        <br>
+        <br>
+        <textarea class="form-control form-control-alternative" rows="3" id="move-history" disabled></textarea>
+        <div style="height: 3vh"></div>
+        <center>
+            <button onclick="restart()" type="button" class="btn btn-outline-danger">Restart</button>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <button onclick="undo_once()" type="button" class="btn btn-outline-warning">Undo</button>
+        </center>
+    </div>
 </body>
 </html>
