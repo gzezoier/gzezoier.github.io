@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.page-header
+		{
+			height: 20vh;
+			width: 100vw;
+			padding: 5vh 15vw;
+			color: #ffffff;
+			background-color: #5e72e4;
+			/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
+			background-image: linear-gradient(120deg, #155799, #159957);
+		}
+		#calc-ans
+		{
+			background-color: #fff;
+		}
+		.darker
+		{
+			background-color: #f7f8f9;
+		}
+		.bold-left::before
+		{
+			content: "\ea10";
+		}
+		#prime-true
+		{
+			color: #2643e9 !important;
+			background-color: rgba(203,210,246,.5) !important;
+		}
+	</style>
+	<!-- title -->
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="icon" href="assets" type="image/x-icon"/>
+	<title>OI工具</title>
+	<!-- argon css -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon -->
+	<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- Icons -->
+	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Argon CSS -->
+	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
+</head>
+<body class="darker">
+	<!-- JS -->
+	<!-- argon JS -->
+	<!-- Core -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/popper/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Theme JS -->
+	<script src="assets/js/argon.js"></script>
+	<!-- hearder -->
+	<script type="text/javascript">
+		function prime()
+		{
+			var allowed = "-0123456789";
+			var e = document.getElementById("expr").value;
+			if (e == "") return 0;
+			for (var i = 0; i < e.length; i++) {
+				sflag = 0;
+				for (var j = 0; j < allowed.length; j++) {
+					if (e[i] == allowed[j]) {
+						sflag = 1;
+					}
+				} 
+				if (!sflag) {
+					flag = 1;
+					alert("表达式有违规字符于" + String(i+1) + " ( " + e[i] + " )");
+					return 0;
+				}
+			}
+			var n = Number(e);
+			if (n <= 1)
+			{
+				alert("No (<=1)");
+				return 0;
+			}
+			for (var i = 2; i <= Math.sqrt(n); i++)
+			{
+				if (n % i == 0)
+				{
+					alert("No (可以被" + i + "整除)");
+					return 0;
+				}
+			}
+			alert("Yes");
+		}
+	</script>
+	<header class="page-header">
+		<div style="font-size: 7vh;font-weight: 550;">素数判断</div>
+	</header>
+	<main class="page-main full-screen">
+		<center class="card shadow">
+			<div class="card-body darker">
+				<a style="float:left;" href="home.html">
+					<button class="btn btn-primary btn-lg" type="button">
+						<span class="left-arrow"></span>
+						<span class="btn-inner--text large-font">返回</span>
+					</button>
+				</a>
+				<div class="tab-content">
+					<form onsubmit = "return prime()" action = "#" autocomplete="off">
+						<div class="col-md-6">
+							<div class="form-group row">
+								<h4>输入</h4>
+								<input class="form-control form-control-alternative" id="expr" placeholder="输入须判断数字" />
+							</div>
+							<span class="badge badge-pill badge-secondary" id="prime-true" onclick="prime()">判断</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</center>
+	</main>
+	<div class="foot-sec">
+		<p>By zhangtianli, szTom and 666DHG</p>
+	</div>
+</body>
+</html>
+<!-- onclick="prime()" -->

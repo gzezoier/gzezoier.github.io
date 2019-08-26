@@ -1,10 +1,12 @@
 .board {
     width: 400px;
-    margin: auto
+    margin: auto;
+    /*box-shadow: 0 10px 20px rgba(50, 50, 93, .17),0 5px 8px rgba(0, 0, 0, .22) !important;*/
+
 }
 
 .info {
-    width: 400px;
+    width: 500px;
     margin: auto;
 }
 
