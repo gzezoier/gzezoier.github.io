@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+<style type="text/css">
+html,body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+iframe {
+    margin: 0;
+    border-style: none;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<!-- layer js-->
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="layer/layer.js"></script>
+
+<script type="text/javascript">
+	var w = layer.open({
+      type: 2,
+      title: 'generals.io',
+      shadeClose: true,
+      shade: false,
+      maxmin: true, //开启最大化最小化按钮
+      area: [String(document.body.clientWidth) + 'px', String(document.body.clientHeight) + 'px'],
+      content: 'http://generals.io'
+    });
+    //layer.full(w);
+    layer.open({
+    	content:"Wait",
+    	end: function() {
+    		$('#layui-layer1').width(1200);
+    		$('#layui-layer1').height(800);
+    		document.getElementById("layui-layer1").style.overflow = "hidden";
+    	}
+    });
+    
+</script>
+<iframe src="https://www.luogu.org" width="100%" height="100%" frameborder="0"></iframe>
+</body>
+</html>

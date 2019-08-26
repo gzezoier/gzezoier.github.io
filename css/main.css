@@ -1,12 +1,12 @@
-.foot-sec {
+footer {
 	width: 100vw; /*展开footer宽度*/
     height: 5vh; /*设定footer高度*/
     position: absolute; /*设定footer绝对位置在底部*/
     bottom: 0;
-    padding: 0.5vh 15vw;
-    font-size: 2vh !important;
+    /*padding: 0.5vh 15vw;*/
+    font-size: 3vh !important;
     background-color: #11cdef;
-    z-index: 100 !important;
+    /*z-index: 100 !important;*/
     text-align: center;
     color: #ffffff;
     /*line-height: 40px;*/
@@ -19,7 +19,7 @@
 
 .page-main
 {
-	height: 75vh;
+	height: 75vh !important;
 	width: 100vw;
 	margin: 0 auto;
 	padding: 10vh 30vw;
