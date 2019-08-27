@@ -22,23 +22,31 @@ iframe {
 	<script src="layer/layer.js"></script>
 
 <script type="text/javascript">
-	var w = layer.open({
-      type: 2,
-      title: 'generals.io',
-      shadeClose: true,
-      shade: false,
-      maxmin: true, //开启最大化最小化按钮
-      area: [String(document.body.clientWidth) + 'px', String(document.body.clientHeight) + 'px'],
-      content: 'https://generals.io'
+
+    layer.prompt({
+      formType: 0,
+      value: 'http://generals.io',
+      title: 'To Place',
+    }, function(value, index){
+      layer.close(index);
+            var w = layer.open({
+              type: 2,
+              title: '等待https://img.luogu.org的响应',
+              shadeClose: true,
+              shade: false,
+              maxmin: true, //开启最大化最小化按钮
+              area: [String(document.body.clientWidth) + 'px', String(document.body.clientHeight) + 'px'],
+              content: value
+            });
+            //layer.full(w);
+            layer.open({
+              content:"Wait",
+              end: function() {
+                $('#layui-layer1').width(1200);
+                $('#layui-layer1').height(800);
+                document.getElementById("layui-layer2").style.overflow = "hidden";
+        }
     });
-    //layer.full(w);
-    layer.open({
-    	content:"Wait",
-    	end: function() {
-    		$('#layui-layer1').width(1200);
-    		$('#layui-layer1').height(800);
-    		document.getElementById("layui-layer1").style.overflow = "hidden";
-    	}
     });
     
 </script>
