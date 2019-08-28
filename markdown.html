@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="icon.png" type="image/x-icon"/>
+	<style type="text/css">
+		.page-header
+		{
+			height: 20vh;
+			width: 100vw;
+			padding: 5vh 15vw;
+			color: #ffffff;
+			background-color: #5e72e4;
+			/*background-image: linear-gradient(120deg, #281483, #d782d9);*/
+			background-image: linear-gradient(120deg, #155799, #159957);
+		}
+		#calc-ans
+		{
+			background-color: #fff;
+		}
+		.darker
+		{
+			background-color: #f7f8f9;
+		}
+		.bold-left::before
+		{
+			content: "\ea10";
+		}
+	</style>
+	<!-- title -->
+	<link href="css/main.css" rel="stylesheet">
+	<title>Markdown编辑&预览器|OI工具</title>
+	<!-- argon css -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- Icons -->
+	<link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Argon CSS -->
+	<link type="text/css" href="assets/css/argon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="editormd/css/editormd.css" />
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="editormd/editormd.min.js"></script>
+</head>
+<body class="darker">
+	<!-- layer js-->
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="layer/layer.js"></script>
+	<!-- JS -->
+	<!-- argon JS -->
+	<!-- Core -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/popper/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Theme JS -->
+	<script src="assets/js/argon.js"></script>
+	<!-- hearder -->
+	<header class="page-header">
+		<div style="font-size: 7vh;font-weight: 550;">Markdown编辑器&编译器</div>
+	</header>
+	<main class="page-main full-screen" style="padding: 5vw 40vh !important">
+		<div id="test-editor" style="box-shadow: 0 5px 15px rgba(50, 50, 93, .1), 0 5px 8px rgba(0, 0, 0, .15) !important">
+		    <textarea style="display:none;"></textarea>
+		</div>
+		<script type="text/javascript">
+		    $(function() {
+		        var editor = editormd("test-editor", {
+		            path   : "editormd/lib/"
+		        });
+		    });
+		</script>
+	</main>
+	<footer>
+		<p>By zhangtianli, szTom and 666DHG</p>
+	</footer>
+</body>
+</html>
