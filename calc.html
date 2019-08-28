@@ -65,6 +65,10 @@
 	        console.log(oInput);
 	        document.execCommand("Copy");// 执行浏览器复制命令
 			oInput.remove();
+			$("#Copy").text("复制成功");
+			$("#Copy").on("mouseout", function(){
+				$("#Copy").text("复制");
+			});
 		};
 
 		function calc() {
