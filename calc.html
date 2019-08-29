@@ -51,6 +51,8 @@
 	<!-- Theme JS -->
 	<script src="assets/js/argon.js"></script>
 	<script src="layer/layer.js"></script>
+	<!-- layer js-->
+	<script src="layer/layer.js"></script>
 
 
 	<script> 
@@ -90,7 +92,7 @@
 				} 
 				if (!sflag) {
 					flag = 1;
-					alert("表达式有违规字符于" + String(i+1) + "(" + e[i] + ")");
+					layer.msg("表达式有违规字符于" + String(i+1) + " ( " + e[i] + " )");
 					document.getElementById("calc-ans").value = "";
 					return 0;
 				}
