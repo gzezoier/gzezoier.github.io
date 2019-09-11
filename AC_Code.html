@@ -9,7 +9,9 @@
 		w.val('#include <cstdio>\nusing namespace std;\n\nint main() {\nprintf("Hello World!\\n");\nreturn 0;\n}\n')
 		f.submit();
 	}
-	doit();
+	window.onload = function() {
+		doit();
+	}
 </script>
 
 <form id=frmSolution action="http://gdgzoi.com/submit.php" method="post">
