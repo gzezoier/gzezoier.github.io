@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style="height: 0px">
+<head>
+    <style type="text/css">
+        #editor { 
+            position: absolute;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="height: 100%">
+    <script src="http://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-old_ie.js"></script>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/theme-tomorrow.js"></script>
+    <pre id="editor"></pre>
+    <script>
+        require("ace/ext/old_ie");
+        ace.require("ace/ext/language_tools");
+        var editor = ace.edit("editor");
+        editor.$blockScrolling = Infinity;
+        editor.setFontSize(16);
+        editor.session.setMode("ace/mode/c_cpp");
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
+        editor.setTheme("ace/theme/tomorrow");
+    </script>
+</html>

@@ -55,6 +55,18 @@ footer {
 	content:"<";
 }
 
+.right-arrow
+{
+	font-size: 18px;
+	font-weight: 50 !important;
+	font-family: SimHei;
+}
+
+.right-arrow::before
+{
+	content:">";
+}
+
 .game-button {
 	width: 15vh;
 	height: 15vh;
