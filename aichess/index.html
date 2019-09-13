@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="../icon.png" type="image/x-icon"/>
+	<title>aichess|OI工具</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
     <link rel="stylesheet" href="style.css">
@@ -15,7 +17,8 @@
     <link type="text/css" href="../assets/css/argon.css" rel="stylesheet">
 </head>
 <body>
-    <div class="card-body shadow" style="overflow: hidden;width: 500px;margin: auto;">
+    <div style="height: 40px; width: 100%"></div>
+    <div class="card-body shadow in-up" style="overflow: hidden;width: 500px;margin: auto;">
     <div id="board" class="board"></div>
     </div>
         <script src="../assets/vendor/jquery/jquery.min.js"></script>
@@ -23,8 +26,8 @@
         <script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
         <script src="script.js"></script>
         <div style="height: 5vh !important"></div>
-        <div class="card-body shadow info" style="font-family: 'Open Sans',sans-serif;">
-        <strong>Search depth:</strong>
+        <div class="card-body shadow info in-up" style="font-family: 'Open Sans',sans-serif;">
+        <strong>搜索深度:</strong>
         <select id="search-depth">
             <option value="-3">-3</option>
             <option value="-2">-2</option>
@@ -38,24 +41,33 @@
         </select>
 
         <br>
-        <span>Positions evaluated: <span id="position-count"></span></span>
+        <span>评估位置数量: <span id="position-count"></span></span>
         <br>
-        <span>Time: <span id="time"></span></span>
+        <span>搜索时间: <span id="time"></span></span>
         <br>
-        <span>Positions/s: <span id="positions-per-s"></span> </span>
+        <span>评估数量/秒: <span id="positions-per-s"></span> </span>
         <br>
         <br>
         <textarea class="form-control form-control-alternative" rows="3" id="move-history" disabled></textarea>
         <div style="height: 3vh"></div>
         <center>
-            <button onclick="restart()" type="button" class="btn btn-outline-danger">Restart</button>
+            <a href="../home.html">
+                <button type="button" class="btn btn-outline-primary">返回</button>
+            </a>
             &nbsp;
             &nbsp;
             &nbsp;
             &nbsp;
             &nbsp;
             &nbsp;
-            <button onclick="undo_once()" type="button" class="btn btn-outline-warning">Undo</button>
+            <button onclick="restart()" type="button" class="btn btn-outline-danger">重新开始</button>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <button onclick="undo_once()" type="button" class="btn btn-outline-warning">悔棋</button>
         </center>
     </div>
 </body>

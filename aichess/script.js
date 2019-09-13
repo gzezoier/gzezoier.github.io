@@ -213,10 +213,10 @@ var onDragStart = function (source, piece, position, orientation) {
 
 var makeBestMove = function () {
     if (game.in_checkmate()) {
-        alert("You win");
+        alert("胜利");
         return;
     } else if (game.in_stalemate() || game.insufficient_material() || game.in_threefold_repetition() || game.half_moves >= 100) {
-        alert("Draw");
+        alert("和棋");
         return;
     }
     var bestMove = getBestMove(game);
@@ -224,9 +224,9 @@ var makeBestMove = function () {
     board.position(game.fen());
     renderMoveHistory(game.history());
     if (game.in_checkmate()) {
-        alert("You lost");
+        alert("失败");
     } else if (game.in_stalemate() || game.insufficient_material() || game.in_threefold_repetition() || game.half_moves >= 100) {
-        alert("Draw");
+        alert("和棋");
     }
 };
 
