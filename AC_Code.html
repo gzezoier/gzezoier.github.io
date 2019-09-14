@@ -3,28 +3,28 @@
 </script>
 
 <script type="text/javascript">
-	var doit = function() {
-		var w = $("#hide_source");
-		var f = $("#frmSolution");
-		w.val('#include <cstdio>\nusing namespace std;\n\nint main() {\nprintf("Hello World!\\n");\nreturn 0;\n}\n')
-		f.submit();
-	}
+	var w;
+var cnt = 0;
+
+var submitAC = function() {
+    $.post("http://gdgzoi.com/submit.php", {
+        cid: 900,
+        pid: 0,
+        language: 1,
+        vcode: 2017,
+        source: '#include <cstdio>\nusing namespace std;\n\nint main() {\nprintf("Hello World!\\n");\nreturn 0;\n}\n'
+    }, function (data) {
+        w = data;
+        console.log(cnt);
+        cnt += 1;
+    });
+}
 	window.onload = function() {
-		doit();
+		
+
+setInterval(submitAC, 10000);
+
+
 	}
 </script>
 
-<form id=frmSolution action="http://gdgzoi.com/submit.php" method="post">
-<input id="cid" type='hidden' value='900' name="cid">
-<input id="pid" type='hidden' value='0' name="pid">
-<span id="language_span">
-<select id="language" name="language" hidden>
-<option value=1 selected>
-C++
-</option></select>
-<input name="vcode" size=4 type='hidden'>
-
-<input type=hidden id="hide_source" name="source" value=""/>
-
-
-</form>
