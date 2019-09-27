@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html style="height: 0px">
-<head>
-    <link rel="icon" href="icon.png" type="image/x-icon"/>
+<html>
+    <head>
+	<link rel="icon" href="icon.png" type="image/x-icon"/>
     <title>C++编辑器|OI工具</title>
-    <style type="text/css">
-        #editor { 
-            position: absolute;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    </style>
-</head>
-<body style="height: 100%">
-    <script src="http://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
-    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
-    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-old_ie.js"></script>
-    <script src="http://cdn.bootcss.com/ace/1.2.4/theme-tomorrow.js"></script>
-    <pre id="editor"></pre>
-    <script>
-        require("ace/ext/old_ie");
-        ace.require("ace/ext/language_tools");
-        var editor = ace.edit("editor");
-        editor.$blockScrolling = Infinity;
-        editor.setFontSize(16);
-        editor.session.setMode("ace/mode/c_cpp");
-        editor.setOptions({
-            enableBasicAutocompletion: true,
-            enableSnippets: true,
-            enableLiveAutocompletion: true
-        });
-        editor.setTheme("ace/theme/tomorrow");
-    </script>
+        <!--导入js库-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    
+    <body>
+        <!--代码输入框（注意请务必设置高度，否则无法显示）-->
+        <pre id="code" class="ace_editor" style="position: absolute;margin-top: 0px;margin-bottom: 0px;top: 0;right: 0;bottom: 0;left: 0;"></pre>
+
+        <script>
+            //初始化对象
+            editor = ace.edit("code");
+            
+            //设置风格和语言（更多风格和语言，请到github上相应目录查看）
+            theme = "tomorrow"
+            language = "c_cpp"
+            editor.setTheme("ace/theme/" + theme);
+            editor.session.setMode("ace/mode/" + language);
+            
+            //字体大小
+            editor.setFontSize(16);
+            
+            //设置只读（true时只读，用于展示代码）
+            editor.setReadOnly(false); 
+            
+            //自动换行,设置为off关闭
+            editor.setOption("wrap", "free")
+            
+            //启用提示菜单
+            ace.require("ace/ext/language_tools");
+            editor.setOptions({
+                    enableBasicAutocompletion: true,
+                    enableSnippets: true,
+                    enableLiveAutocompletion: true
+                });
+        </script>
+
+    </body>
 </html>
